@@ -1,4 +1,5 @@
-//COMANDOS BÁSICOS:
+COMANDOS BÁSICOS:
+=================
 
 Añadir fichero en Git local: git add .
 Guardar/Confirmar archivo en repositorio local Git: git commit -m "Frase de confirmacion archivo"
@@ -44,20 +45,21 @@ find . -name "nombre_archivo"
 
 
 SUBIR A GIT REMOTO EL PROYECTO LOCAL
+=================
 git init
 git add .
 git commit -m "first commit"
-git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git                 
+git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git
 git push -u origin main
 
 
 O BIEN...
-git push --set-upstream origin main  
+git push --set-upstream origin main
 
 
 
 MENSAJE DE COMMIT EN LA TERMINAL BASH
-
+=================
 To write a commit message and get out of VI, follow these steps:
 
 press i (i for insert)
@@ -69,7 +71,7 @@ then press enter
 
 
 CLONAR REPOSITORIO
-
+=================
 Clonar el repositorio:
 git clone https://github.com/usuario/nombre-repositorio.git
 
