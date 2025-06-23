@@ -1,22 +1,36 @@
 COMANDOS BÁSICOS:
 =================
 
-Añadir fichero en Git local: git add .
-Guardar/Confirmar archivo en repositorio local Git: git commit -m "Frase de confirmacion archivo"
+Añadir fichero en Git local: 
+git add .
+
+Guardar/Confirmar archivo en repositorio local Git: 
+git commit -m "Frase de confirmacion archivo"
+
 Identificar quien somos: 
 	 git config --global user.email "your@email.com"
 	 git config --global user.name "Your Name"
-Comprobar que se ha guardado en repositorio local: git commit -m "Frase de confirmacion archivo"
-Subir al repositorio remoto de GitHub: git push
-Ver el estado de Git: git status
+  
+Comprobar que se ha guardado en repositorio local:
+git commit -m "Frase de confirmacion archivo"
 
-Fusionar historiales de cambios del repositorio remoto y el local: git pull --allow-unrelated-histories URL main
+Subir al repositorio remoto de GitHub:
+git push
 
-Crear una nueva rama llamada 'main' y cambiar a ella el proyecto: git checkout -b main
+Ver el estado de Git: 
+git status
 
-Verificar el repositorio remoto: git remote -v
+Fusionar historiales de cambios del repositorio remoto y el local: 
+git pull --allow-unrelated-histories URL main
 
-Eliminar rama : git branch -d branch-namegit 
+Crear una nueva rama llamada 'main' y cambiar a ella el proyecto: 
+git checkout -b main
+
+Verificar el repositorio remoto: 
+git remote -v
+
+Eliminar rama : 
+git branch -d branch-namegit 
 
 Recuperar archivos el eliminados: 
 git log (para identificar el id del commit donde se borraron) también git log --oneline
