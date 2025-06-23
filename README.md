@@ -70,11 +70,11 @@ then press enter
 
 CLONAR REPOSITORIO
 
-# Clonar el repositorio
+Clonar el repositorio:
 git clone https://github.com/usuario/nombre-repositorio.git
 
-# Cambiar al directorio del repositorio clonado
+Cambiar al directorio del repositorio clonado:
 cd nombre-repositorio
 
-# Verificar el estado del repositorio
+Verificar el estado del repositorio:
 git status
