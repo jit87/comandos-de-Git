@@ -1,96 +1,133 @@
-COMANDOS BÁSICOS:
-=================
+# 🧠 Guía de Comandos Básicos de Git
 
-Añadir fichero en Git local: 
+Una recopilación de los comandos esenciales para trabajar con Git en entornos locales y remotos.
+
+---
+
+## 📌 COMANDOS BÁSICOS
+
+### 🔄 Añadir y confirmar cambios en el repositorio local
+```bash
 git add .
+git commit -m "Mensaje de confirmación"
+```
 
-Guardar/Confirmar archivo en repositorio local Git: 
-git commit -m "Frase de confirmacion archivo"
+### 👤 Configurar identidad del usuario
+```bash
+git config --global user.email "tu@email.com"
+git config --global user.name "Tu Nombre"
+```
 
-Identificar quien somos: 
-	 git config --global user.email "your@email.com"
-	 git config --global user.name "Your Name"
-  
-Comprobar que se ha guardado en repositorio local:
-git commit -m "Frase de confirmacion archivo"
-
-Subir al repositorio remoto de GitHub:
-git push
-
-Ver el estado de Git: 
+### 📋 Ver estado del repositorio
+```bash
 git status
+```
 
-Fusionar historiales de cambios del repositorio remoto y el local: 
+### 🔁 Fusionar cambios del repositorio remoto con el local
+```bash
 git pull --allow-unrelated-histories URL main
+```
 
-Crear una nueva rama llamada 'main' y cambiar a ella el proyecto: 
+### 🌿 Crear una nueva rama y cambiar a ella
+```bash
 git checkout -b main
+```
 
-Verificar el repositorio remoto: 
+### 🔍 Verificar el repositorio remoto
+```bash
 git remote -v
+```
 
-Eliminar rama : 
-git branch -d branch-namegit 
+### 🗑️ Eliminar una rama local
+```bash
+git branch -d nombre-rama
+```
 
-Recuperar archivos el eliminados: 
-git log (para identificar el id del commit donde se borraron) también git log --oneline
-git checkout id_del_commit .(recuperación)
+---
 
+## 🧯 Recuperación y control de versiones
 
-Regresar a la versión indicada de commit (elimina las revisiones posteriores a ese hash):
-git reset --hard <hash_del_commit>  
+### 📜 Ver historial de commits
+```bash
+git log
+git log --oneline
+```
 
-Regresar a la versión del commit indicando posición del mismo (este ejemplo elimina los 3 últimos):
+### ♻️ Recuperar archivos eliminados
+```bash
+git checkout <id_del_commit> .
+```
+
+### ⏪ Volver a un commit anterior (elimina cambios posteriores)
+```bash
+git reset --hard <hash_del_commit>
+```
+
+### ⏳ Volver atrás N commits
+```bash
 git reset --hard HEAD~3
+```
 
-Eliminar fichero del repositorio:
-git rm --cached nombre_fichero   (después hacer commit del cambio)
+---
 
-Dejar de subir archivo (cuando nos hemos confundido en .gitignore)
+## 🧹 Limpieza y ajustes
+
+### 🗃️ Eliminar archivo del repositorio (mantenerlo en local)
+```bash
+git rm --cached nombre_archivo
+```
+
+### 🛑 Evitar que un archivo siga subiendo (por error en .gitignore)
+```bash
 git rm --cached ruta_archivo
+```
 
-Reescribir el repositorio remoto con el local (se borra el remoto y se sube lo que haya en el local):
+### ⚠️ Forzar que el repositorio remoto sea igual al local
+```bash
 git push --force origin main
+```
 
-Buscar la ubicación exacta de archivo:
+---
+
+## 🔍 Búsqueda
+
+### 📂 Buscar un archivo específico por nombre
+```bash
 find . -name "nombre_archivo"
+```
 
+---
 
+## 🚀 SUBIR PROYECTO LOCAL A REPOSITORIO REMOTO
 
-
-SUBIR A GIT REMOTO EL PROYECTO LOCAL
-=================
+### Opción 1: Paso a paso
+```bash
 git init
 git add .
 git commit -m "first commit"
-git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git
+git remote add origin https://github.com/USUARIO/NOMBRE_REPOSITORIO.git
 git push -u origin main
+```
 
-
-O BIEN...
+### Opción 2: Alternativa con set-upstream
+```bash
 git push --set-upstream origin main
+```
 
+---
 
+## 💬 MENSAJE DE COMMIT EN VI (terminal Bash)
 
-MENSAJE DE COMMIT EN LA TERMINAL BASH
-=================
-To write a commit message and get out of VI, follow these steps:
+1. Pulsa `i` para insertar texto  
+2. Escribe tu mensaje de merge  
+3. Pulsa `ESC`  
+4. Escribe `:wq` y pulsa `Enter` para guardar y salir  
 
-press i (i for insert)
-write your merge message
-press esc (escape)
-write :wq (write & quit)
-then press enter
+---
 
-
-
-CLONAR REPOSITORIO
-=================
-Clonar el repositorio:
+## 📥 CLONAR UN REPOSITORIO
+```bash
 git clone https://github.com/usuario/nombre-repositorio.git
-
-Cambiar al directorio del repositorio clonado:
 cd nombre-repositorio
-
-Verificar el estado del repositorio:
 git status
+```
