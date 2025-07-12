@@ -65,7 +65,7 @@ git reset --hard <hash_del_commit>
 
 ### ⏳ Volver atrás N commits
 ```bash
-git reset --hard HEAD~3
+git reset --hard HEAD~N
 ```
 
 ---
