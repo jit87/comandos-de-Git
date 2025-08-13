@@ -45,6 +45,41 @@ git branch -d nombre-rama
 
 ---
 
+### Fusionar ramas
+
+Pasos para fusionar dos ramas en Git
+
+1. Ir a la rama destino (la que recibirá los cambios):
+
+   ```bash
+   git checkout main
+   ```
+3. Actualizar la rama destino con el remoto:
+   ```bash
+   git pull origin main
+   ```
+5. Fusionar la rama origen (la que tiene los cambios, en este caso la llamamos 'develop'):
+   ```bash
+   git merge develop
+   ```
+
+7. Resolver conflictos (solo si los hay):
+   - Editar los archivos marcados por Git.
+   - Marcar como resueltos:
+     ```bash
+     git add <archivo>
+     ```
+   - Confirmar la resolución:
+     ```bash
+     git commit
+     ```
+
+8. Subir los cambios fusionados al remoto:
+   ```bash
+   git push origin main
+   ```
+---
+
 ## 🧯 Recuperación y control de versiones
 
 ### 📜 Ver historial de commits
