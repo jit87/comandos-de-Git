@@ -45,7 +45,7 @@ git branch -d nombre-rama
 
 ---
 
-### Fusionar ramas
+### FUSIONAR RAMAS
 
 Pasos para fusionar dos ramas en Git
 
